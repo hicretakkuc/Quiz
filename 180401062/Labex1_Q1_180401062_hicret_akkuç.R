@@ -4,3 +4,5 @@ download.file(url, destfile = "MapsThatChangedOurWorld_StoryMap_Data.csv", mode 
 maps <- read.csv("180401062/MapsThatChangedOurWorld_StoryMap_Data.csv",sep=";")
 
 maps$Latitude <- gsub("N", "", as.character(maps$Latitude))
+
+idx <- which(grepl("W", maps$Longitude))
