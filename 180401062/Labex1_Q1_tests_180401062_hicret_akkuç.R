@@ -45,3 +45,7 @@ test_that("Test : Latitude adlı sütun numeric değerlerden oluşmalıdır.", {
 test_that("Test : Longitude adlı sütun numeric değerlerden oluşmalıdır.", {
   expect_is(maps$Longitude, "numeric", info = "Longitude sütunu numeric değerlerden oluşmuyor.")
 })
+
+test_that("Test : idx adlı değişken Global Workspace’de mevcuttur.", {
+  expect_true(exists("idx", envir = .GlobalEnv), info = "idx adlı değişken mevcut değil.")
+})
