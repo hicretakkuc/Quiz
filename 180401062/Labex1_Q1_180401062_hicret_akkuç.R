@@ -10,3 +10,6 @@ idx <- which(grepl("W", maps$Longitude))
 maps$Longitude <- gsub("E","",maps$Longitude)
 maps$Longitude <- gsub("W","",maps$Longitude)
 maps$Longitude <- as.character(maps$Longitude)
+
+maps$Year <- gsub("AD","",maps$Year)
+maps$Year <- as.numeric(maps$Year)
