@@ -6,3 +6,7 @@ maps <- read.csv("180401062/MapsThatChangedOurWorld_StoryMap_Data.csv",sep=";")
 maps$Latitude <- gsub("N", "", as.character(maps$Latitude))
 
 idx <- which(grepl("W", maps$Longitude))
+
+maps$Longitude <- gsub("E","",maps$Longitude)
+maps$Longitude <- gsub("W","",maps$Longitude)
+maps$Longitude <- as.character(maps$Longitude)
